@@ -1,14 +1,14 @@
 <template>
-  <div class="comment-block">
-    <div class="header">
-      <div class="header-title">
+  <section class="comment-block">
+    <header class="header">
+      <article class="header-title">
         <h4>Подумать</h4>
         <p>Продавец</p>
-      </div>
+      </article>
       <div>
         <button class="header-btn btn">Сменить этап подбора</button>
       </div>  
-    </div>
+    </header>
     <form @submit.prevent="handleSubmit" class="form-block">
       <input
         v-model="inputValue"
@@ -33,7 +33,7 @@
        v-bind:handleChangeComment="handleChangeComment"
        />
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>

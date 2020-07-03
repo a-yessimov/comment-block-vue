@@ -1,7 +1,7 @@
 <template>
   <li class="comment-list__item">
     <p class="comment-list__text">{{comment.text}}</p>
-    <div class="comment-info">
+    <article class="comment-info">
       <font-awesome-icon icon="user-circle" />
       <span class="comment-info__name">{{comment.author}},</span>
       <span class="comment-info__date">{{comment.date | getTimeStr}}</span>
@@ -14,7 +14,7 @@
           <button @click="handleRemove">Удалить</button>
         </div>
       </div>
-    </div>
+    </article>
   </li>
 </template>
 
