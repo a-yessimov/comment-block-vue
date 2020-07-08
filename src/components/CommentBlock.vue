@@ -136,6 +136,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 15px;
 }
 .header-title h4 {
@@ -179,5 +180,11 @@ body {
   background-color: #fff;
   color: #38343f;
   font-weight: bold;
+}
+
+@media (max-width: 329px) {
+  .header-btn.header-btn {
+    margin-top: 20px;
+  }
 }
 </style>

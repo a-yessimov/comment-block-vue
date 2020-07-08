@@ -5,7 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        comments: []
+        comments: [],
+        isModalOpen: false,
+        commentToDelete: {}
     },
     mutations: {
         addComment(state, payload) {
@@ -18,6 +20,14 @@ export default new Vuex.Store({
         changeComment(state, payload) {
             const index = state.comments.map(comment => comment.id).indexOf(payload.id)
             state.comments[index] = payload
+        },
+        setModalOpen(state, {status, comment}) {
+            state.isModalOpen = status
+            state.commentToDelete = comment
         }
+    },
+    getters: {
+        getIsModalOpen: state => state.isModalOpen,
+        getCommentToDelete: state => state.commentToDelete
     }
 })

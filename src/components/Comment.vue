@@ -38,7 +38,11 @@ export default {
       this.handleChangeComment(this.comment);
     },
     handleRemove() {
-      this.$store.commit("removeComment", this.comment);
+      this.$store.commit("setModalOpen", {
+        status: true,
+        comment: this.comment
+      })
+      // this.$store.commit("removeComment", this.comment);
     },
     handleBlurTooltip() {
       setTimeout(() => {
